@@ -1,0 +1,18 @@
+E:\Visual Studio 2008\Projects\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).dll
+E:\Visual Studio 2008\Projects\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).pdb
+E:\Visual Studio 2008\Projects\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\obj\Debug\ResolveAssemblyReference.cache
+E:\Visual Studio 2008\Projects\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).dll
+E:\Visual Studio 2008\Projects\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).pdb
+C:\Documents and Settings\Administrator\桌面\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).dll
+C:\Documents and Settings\Administrator\桌面\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).pdb
+C:\Documents and Settings\Administrator\桌面\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).dll
+C:\Documents and Settings\Administrator\桌面\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).pdb
+J:\jy\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).dll.config
+J:\jy\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).dll
+J:\jy\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).pdb
+J:\jy\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).csprojResolveAssemblyReference.cache
+J:\jy\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).dll
+J:\jy\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).pdb
+J:\jy\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).csproj.ResolveComReference.cache
+J:\jy\ntkoofficedemo(vs2008)\bin\bin\SHDocVw.DLL
