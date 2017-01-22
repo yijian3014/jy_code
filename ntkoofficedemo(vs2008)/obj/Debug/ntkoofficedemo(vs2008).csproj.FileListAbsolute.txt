@@ -16,3 +16,11 @@ J:\jy\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).dll
 J:\jy\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).pdb
 J:\jy\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).csproj.ResolveComReference.cache
 J:\jy\ntkoofficedemo(vs2008)\bin\bin\SHDocVw.DLL
+J:\team code\jy_code\ntkoofficedemo(vs2008)\bin\bin\SHDocVw.DLL
+J:\team code\jy_code\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).dll.config
+J:\team code\jy_code\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).dll
+J:\team code\jy_code\ntkoofficedemo(vs2008)\bin\ntkoofficedemo(vs2008).pdb
+J:\team code\jy_code\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).csprojResolveAssemblyReference.cache
+J:\team code\jy_code\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).csproj.ResolveComReference.cache
+J:\team code\jy_code\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).dll
+J:\team code\jy_code\ntkoofficedemo(vs2008)\obj\Debug\ntkoofficedemo(vs2008).pdb

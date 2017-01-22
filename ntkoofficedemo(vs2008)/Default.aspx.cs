@@ -11,6 +11,13 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Collections;
+
+/*
+关于树的一些说明：
+大致分类有： 管理制度、精益车间创建、项目管理、IE、绩效项目管理平台、拉动管理、学习培训、物与信息流动图、卓越绩效、
+标准化作业（汇总）、办公模板、管理创新奖、用户满意度、上报公司、其它、照片
+*/
+
 namespace ntkoofficedemo_vs2008_
 {
     public partial class _Default : System.Web.UI.Page
@@ -21,22 +28,20 @@ namespace ntkoofficedemo_vs2008_
         DataSet ds2 = new DataSet();
         DataSet ds3 = new DataSet();
         DataSet ds4 = new DataSet();
+        DataSet ds_tree = new DataSet();
         ntko_class db = new ntko_class();
         
 
         protected void Page_Load(object sender, EventArgs e)
         {
             //DropDownList1 目录1
-
             //DropDownList2 目录2
             //DropDownList3 目录3
             //DropDownList4 标签
             if (!this.IsPostBack)
             {
                 ds1 = db.dataset("select * from [dzsw].[dbo].[JY_Classinfo] where ClassLevel=1");
-
                 ds4 = db.dataset(" select [TagsOne] as tags  from[dzsw].[dbo].[JY_BookInfo]  union  select[TagsTwo] as tags  from[dzsw].[dbo].[JY_BookInfo]  union  select[TagsThr] as tags  from[dzsw].[dbo].[JY_BookInfo]  order by tags asc");
-               
                 user_id.Text = Session["user_id"].ToString();
                 user_stu.Text = Session["user_stu"].ToString();
                 user_name.Text = Session["user_name"].ToString();
@@ -56,16 +61,18 @@ namespace ntkoofficedemo_vs2008_
                     this.DropDownList1.DataValueField = "CompleteNo";
                     this.DropDownList1.DataBind();
                     this.DropDownList1.Items.Insert(0, "所有记录");
-
                     this.DropDownList4.DataSource = ds4.Tables[0].DefaultView;
                     this.DropDownList4.DataTextField = "tags";
                     //this.DropDownList4.DataValueField = "Id";
                     this.DropDownList4.DataBind();
                     this.DropDownList4.Items.Insert(0, "所有记录");
-
                     this.DropDownList2.Items.Insert(0, "所有记录");
                     this.DropDownList3.Items.Insert(0, "所有记录");
-                    
+                    //trev_cat.DataSource= ds1.Tables[0].DefaultView;
+                    //for (int i = 0; i < ds1.Tables[0].Rows.Count; i++)
+                    //    string ss = ds1.Tables[0].Columns[i].ToString();
+                    //    TreeNode tn = new TreeNode();
+                    //    trev_cat.Nodes.Add(tn);
                 }
                 catch (Exception er)
                 {
@@ -73,11 +80,21 @@ namespace ntkoofficedemo_vs2008_
                     Response.Redirect(er.Message.ToString());
 
                 }
-            
-
             }
+            //ds_tree = db.dataset("sql");
+        }
 
+        public Boolean tree_insert_items(ArrayList items,TreeNode nd,int position) 
+            //items:要加入的结点集合。nd:要挂在哪哪结点下，position:插入原有结点哪个位置
+        {
+            
+            return true;
+        }
+        public Boolean tree_build(DataSet ds)
+            //构造树结构数据准备，要求两列数据，一列TREE.TEXT,一列TREE.VALUE
+        {
 
+            return true;
         }
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -127,6 +144,7 @@ namespace ntkoofficedemo_vs2008_
                     this.DropDownList3.DataSource = ds3.Tables[0].DefaultView;
                     this.DropDownList3.DataTextField = "ClassName";
                     this.DropDownList3.DataValueField = "CompleteNo";
+                    
                     this.DropDownList3.DataBind();
                     this.DropDownList3.Items.Insert(0, "所有记录");
 
