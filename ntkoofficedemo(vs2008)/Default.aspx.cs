@@ -47,6 +47,7 @@ namespace ntkoofficedemo_vs2008_
                 user_name.Text = Session["user_name"].ToString();
                 user_dep.Text = Session["user_dep"].ToString();
                 user_role.Text = Session["user_role"].ToString();
+                user_name.ToolTip = user_dep.Text + user_role.Text;
 
                 try
                 {
@@ -82,6 +83,7 @@ namespace ntkoofficedemo_vs2008_
                 }
             }
             //ds_tree = db.dataset("sql");
+            
         }
 
         public Boolean tree_insert_items(ArrayList items,TreeNode nd,int position) 
@@ -194,17 +196,25 @@ namespace ntkoofficedemo_vs2008_
         public string getFilesList()
         {
             string sRet = "";
+            string short_filename = "";
             SqlDataReader dr = db.datareader("  select  top 20 * from [dzsw].[dbo].[JY_BookInfo] where fileFormats in ('.docx', '.doc', '.xls', '.xlsx','.pptx','.ppt' ) " + str_where + " ORDER BY UpdateDate desc");
             try
             {
                 while (dr.Read())
                 {
+                    //由于会出现过长文件名，下面IF语句用于处理过长文件名，以便显示美观
+                    if (Convert.ToString(dr["fileNa"]).Length >40)
+                        short_filename = Convert.ToString(dr["fileNa"]).Substring(0,40) + "...";
+                    else
+                        short_filename = Convert.ToString(dr["fileNa"]);
 
-                    string fid = dr["fileNo"].ToString();
+                   string fid = dr["fileNo"].ToString();
                 
                         sRet += "<div height=\"60px\" onmouseover='this.className=\"mouseover\"' onmouseout='this.className=\"mouseout\"'>"
-                               + " <img width=\"30px\" height=\"30px\" src=\"images/"+dr["fileFormats"]+ ".png\"style=\"margin-bottom:-5px; \"/> <a href=\"readoffice.aspx?officetype=1&url=" + fid
-                               + "\"  target=_blank>&nbsp;" + dr["fileNa"] + "&nbsp;</a>" + "</div>";
+                               //+ " <img width=\"30px\" height=\"30px\" src=\"images/"+dr["fileFormats"]+ ".png\"style=\"margin-bottom:-5px; \"/> <a href=\"readoffice.aspx?officetype=1&url=" + fid
+                                + " <a href=\"readoffice.aspx?officetype=1&url=" + fid
+
+                               + "\"  target=_blank>&nbsp;" + short_filename + "&nbsp;</a>" + "</div>";
                 }
             }
             catch (Exception er)
@@ -220,6 +230,22 @@ namespace ntkoofficedemo_vs2008_
             return sRet;
         }
 
+        public string getCatalogTree()
+        //用于生成导航用树，目前来看，可以用鼠标事件加get_list()方法实现。最后确定于版块内容是全动态生成还是部分生成。
+        //全动态数据来源于查找中的DDL1-DLL4，存在的问题有两点：1，目前数据库资料种类缺乏，大部分版代码无法完成测试。
+        //2，动态填充，代码复杂，页面局部刷新不好控制。
+        {
+            return "";
+        }
+        public string get_list(DataSet ds, int disp_x, int disp_y)
+        {
+
+            return "";
+        }
+        public string get_div_files()
+        {
+            return "";
+        }
         //获取数据库热点文件列表
         public string getHotFile()
         {

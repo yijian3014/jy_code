@@ -98,6 +98,7 @@
     <Content Include="images\.xlsx.png" />
     <Content Include="images\background.jpg" />
     <Content Include="images\background.png" />
+    <Content Include="images\catalog_tree_ground.jpg" />
     <Content Include="images\Companyinfo.jpg" />
     <Content Include="images\content.jpg" />
     <Content Include="images\default_banner.jpg" />
@@ -115,6 +116,7 @@
     <Content Include="images\edit_save_office.gif" />
     <Content Include="images\edit_save_pdf.gif" />
     <Content Include="images\error404.jpg" />
+    <Content Include="images\hot_file_ground.jpg" />
     <Content Include="images\index_banner.jpg" />
     <Content Include="images\index_button_et.gif" />
     <Content Include="images\index_button_ppt.gif" />

@@ -13,6 +13,15 @@ namespace ntkoofficedemo_vs2008_ {
     public partial class _Default {
         
         /// <summary>
+        /// form1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
         /// Label3 控件。
         /// </summary>
         /// <remarks>
@@ -38,15 +47,6 @@ namespace ntkoofficedemo_vs2008_ {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label user_stu;
-        
-        /// <summary>
-        /// form1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
         /// Image1 控件。
@@ -112,13 +112,13 @@ namespace ntkoofficedemo_vs2008_ {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Image4 控件。
+        /// li_glzd 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image4;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl li_glzd;
         
         /// <summary>
         /// Image3 控件。
