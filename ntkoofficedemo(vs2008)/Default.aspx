@@ -29,13 +29,31 @@
             height: 400px;
             overflow: auto;
         }
+        .auto-style2 {
+            width: 980px;
+            height: auto;
+            float: none;
+            top: 0;
+        }
+        .auto-style3 {
+            width: 100%;
+            height: 40px;
+            float: none;
+            bottom: 136px;
+            position: fixed;
+            z-index: 0;
+            left: 0;
+        }
+        .daohang ul{list-style:none;width:980px;font-size:small;}
+.daohang li{float:left;width:80px;background:#CCC;margin-left:3px;line-height:25px;}
+.daohang a{display:block;text-align:center;height:25x;}
+/*.daohang a:link{color:#666;background:url(arrow_off.gif) #CCC no-repeat 5px 12px;text-decoration:none;}*/
+.daohang a:visited{color:#666;text-decoration:underline;}
+/*.daohang a:hover{color:#FFF; font-weight:bold;text-decoration:none;background:url(arrow_on.gif) #F00 no-repeat 5px 12px;}*/
     </style>
-    <script language="text/javascript">
-   
-        this.li_glzd.attributes.add("onMouseOut", "javascript:li_glzd.style.background-color: #FF0000");
-    </script>
 </head>
 <body>
+   
     <form id="form1" runat="server" style="text-align: center; margin: 0 auto;">
         <div>
             <div style="text-align: right; background-color:darkslategrey;text-align: center; width: 100%; height: 40px; float: none; top: 0; position: fixed; z-index: 0; left: 0;">
@@ -108,360 +126,393 @@
             <hr size="1" style="background-color: #000000"  width="980px" />
 
 
-            <div id="file_list" style="width: 980px; height: auto; text-align: left; float: none; margin: 0 auto; top: 0;">
+            <div id="file_list" style="text-align: left; margin: 0 auto; " class="auto-style2">
                 <table style="top:0;">
                      <tr style="vertical-align:top;">
                         <td>
                            
                             <div id="tre_cat" class="menu" style="font-size:medium;width: 200px;line-height:30px; height: auto; text-align: left; float: none; margin: 0 auto; top: 0; background-color: #CCCCCC; background-image: url('http://localhost:4489/images/catalog_tree_ground.jpg'); font-family: 幼圆; font-weight: bold;">
                                     <%=getCatalogTree() %>
-                                    <ul id="ul_daohang_list">
-                                        <li id="li_glzd"  runat="server"  onmouseout="onMouseOut(this)" ><a >1.管理制度</a></li>
-                                        <li id="li_jycjcj"><a >2.精益车间创建</a></li>
-                                        <li id="li_xmgl"><a >3.项目管理</a></li>
-                                        <li id="li_IE"><a>4.IE</a></li>
-                                        <li id="li_jxglpt"><a>5.绩效管理平台</a></li>
-                                        <li id="li_ldgl" ><a>6.拉动管理</a></li>
-                                        <li id="li_xxpx"><a>7.学习培训</a></li>
-                                        <li id="li_wyxxld"><a>8.物与信息流动</a></li>
-                                        <li id="li_zyjx"><a>9.卓越绩效</a></li>
-                                        <li id="li_bzhzy" ><a>10.标准化作业</a></li>
-                                        <li id="li_other"><a >11.其它</a></li>
+                                  <%--  <ul id="ul_daohang_list">
+                                        <li id="li_glzd" ><a  href="#guanlizhidu" target="_self">1.管理制度</a></li>
+                                        <li id="li_jycjcj"><a   href="#jingyichejianchuangjian" target="_self">2.精益车间创建</a></li>
+                                        <li id="li_xmgl"><a  href="#xiangmuguanli" target="_self" >3.项目管理</a></li>
+                                        <li id="li_IE" ><a href="#IE" target="_self">4.IE</a></li>
+                                        <li id="li_jxglpt"><a  href="#jixiaoguanlipingtai" target="_self">5.绩效管理平台</a></li>
+                                        <li id="li_ldgl" ><a  href="#ladongguanli" target="_self">6.拉动管理</a></li>
+                                        <li id="li_xxpx" ><a href="#xuexipeixun" target="_self">7.学习培训</a></li>
+                                        <li id="li_wyxxld"><a  href="#wuyuxinxiliudong" target="_self">8.物与信息流动</a></li>
+                                        <li id="li_zyjx"><a  href="#zhuoyuejixiao" target="_self">9.卓越绩效</a></li>
+                                        <li id="li_bzhzy" ><a  href="#biaozhunhuazhuoye" target="_self">10.标准化作业</a></li>
+                                        <li id="li_other"><a   href="#qita" target="_self">11.其它</a></li>
                                       
-                                    </ul>
+                                    </ul>--%>
                                
 
                             </div>
            
                         </td>
                         <td>
-                             <div>
+                             <div id="wendangzhiliao">
                                <span>文档资料：</span>
                             </div>
-                            <div style="text-align: left; width: 600px; line-height:30px; height:400px; overflow: auto; font-size: small;">
+                            <div id="wendangzhiliao_content"  style="text-align: left; width: 600px; line-height:30px; height:400px; overflow: auto; font-size: small;">
 
                                 <%=getFilesList() %>
                             </div>
-                            <div id="guanlizhidu" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none;height:40px;">    
-                                    <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gongshizhidu"  style="display: inline; float:none; ;height:40px;width:50px;"><a>公司制度</a></li>
+                            <div id="guanlizhidu" style="display: inline; float:none;height:40px;">    
+                                    <ul style="list-style: none;width:200px;display: inline; float:none;height:40px;">
+                                        <li id="glzd_gszd"  style="display: inline; float:none;height:40px;width:50px;"><a>公司制度</a></li>
                                         </ul> 
                                          <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="changjizhidu"  style="display: inline; float:none; ;height:40px;width:50px;"><a>厂级制度</a></li>
+                                        <li id="glzd_cjzd"  style="display: inline; float:none; height:40px;width:50px;"><a>厂级制度</a></li>
                                     </ul> 
-                               </div>
-                               
-                               
+                               </div>                               
+                             <div id="guanlizhidu_content" style="text-align: left; line-height: 40px; " >                                                              
                                  <%=getFilesList() %>
                             </div>
-                            <div id="jingyichejianchuangjian" style="text-align: left; line-height:30px; font-size: small;" class="auto-style1">
-                                 <div style="display: inline; float:none; ;height:40px;">    
-                                        <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="lt1b"  style="display: inline; float:none; ;height:40px;width:50px;"><a>炼铁一部</a></li>
+                            
+                            
+                            
+                            <div id="jingyichejianchuangjian" style="display: inline; float:none; height:40px;">    
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="jyzjcj_lt1b"  style="display: inline; float:none; height:40px;width:50px;"><a>炼铁一部</a></li>
                                     
 
                                     </ul>
-                                        <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="lh2b"  style="display: inline; float:none; ;height:40px;width:50px;"><a>炼铁二部</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="jyzjcj_lh2b"  style="display: inline; float:none; ;height:40px;width:50px;"><a>炼铁二部</a></li>
                                     
 
                                     </ul>
-                                     <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="yscj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>烧结一部</a></li>
+                                     <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="jyzjcj_sjyb"  style="display: inline; float:none; ;height:40px;width:50px;"><a>烧结一部</a></li>
                                     
 
                                     </ul>
                                        
-                                         <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="shishaocj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>烧结二部</a></li>
+                                         <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="jyzjcj_sj2b"  style="display: inline; float:none; height:40px;width:50px;"><a>烧结二部</a></li>
                                     
 
                                     </ul>
-                                        <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="ylcj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>原料作业部</a></li>
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="jyzjcj_sylzyb"  style="display: inline; float:none; ;height:40px;width:50px;"><a>原料作业部</a></li>
                                     
 
                                     </ul>
                                       <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="sylcj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>运料作业部</a></li>
+                                        <li id="jyzjcj_ylzyb"  style="display: inline; float:none; height:40px;width:50px;"><a>运料作业部</a></li>
                                     
 
                                     </ul>
-                                        <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="pmcj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>喷煤作业部</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
+                                        <li id="jyzjcj_pmzyb"  style="display: inline; float:none; height:40px;width:50px;"><a>喷煤作业部</a></li>
                                     
 
                                     </ul>
-                                      <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="bhcj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>白灰作业部</a></li>
+                                      <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
+                                        <li id="jyzjcj_bhzyb"  style="display: inline; float:none; height:40px;width:50px;"><a>白灰作业部</a></li>
                                     
 
                                     </ul>
 
-                                        <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="wjb"  style="display: inline; float:none; ;height:40px;width:50px;"><a>维检部</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="jyzjcj_wjb"  style="display: inline; float:none; height:40px;width:50px;"><a>维检部</a></li>
                                     
 
                                     </ul>
                                             <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="zdhb"  style="display: inline; float:none; ;height:40px;width:50px;"><a>自动化部</a></li>
+                                        <li id="jyzjcj_zdhb"  style="display: inline; float:none; height:40px;width:50px;"><a>自动化部</a></li>
                                     
 
                                     </ul>
                                      
                                 </div>
+                            <div id="jingyichejianchuangjian_content" style="text-align: left; line-height:30px; font-size: small;" class="auto-style1">
+                                 
                                  <%=getFilesList() %>
                             </div>
-                               <div id="xiangmuguanli" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none; ;height:40px;">    
-                                        <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="zd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>制度</a></li>
+                               <div id="xiangmuguanli" style="display: inline; float:none; height:40px;">    
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="xmgl_zd"  style="display: inline; float:none; height:40px;width:50px;"><a>制度</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="2017"  style="display: inline; float:none; ;height:40px;width:50px;"><a>2017</a></li>
+                                        <ul style="list-style: none;width:200px;display: inline; float:none;height:40px;">
+                                        <li id="xmgl_2017"  style="display: inline; float:none;height:40px;width:50px;"><a>2017</a></li>
                                     
 
                                     </ul>
-                                          <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="2016"  style="display: inline; float:none; ;height:40px;width:50px;"><a>2016</a></li>
+                                          <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="xmgl_2016"  style="display: inline; float:none;height:40px;width:50px;"><a>2016</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="2015"  style="display: inline; float:none; ;height:40px;width:50px;"><a>2015</a></li>
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="xmgl_2015"  style="display: inline; float:none;height:40px;width:50px;"><a>2015</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="2014"  style="display: inline; float:none; ;height:40px;width:50px;"><a>2014</a></li>
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="xmgl_2014"  style="display: inline; float:none;height:40px;width:50px;"><a>2014</a></li>
                                     
 
                                     </ul>
                                 </div>
+                                <div id="xiangmuguanli_content" style="text-align: left; line-height: 40px; " class="auto-style1">
                                
                                
                                  <%=getFilesList() %>
                             </div>
-                               <div id="IE" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none; ;height:40px;">    
-                                       <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="lt1b"  style="display: inline; float:none; ;height:40px;width:50px;"><a>炼铁一部</a></li>
+                               <div id="IE" style="display: inline; float:none; height:40px;">    
+                                       <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="IE_lt1b"  style="display: inline; float:none; height:40px;width:50px;"><a>炼铁一部</a></li>
                                     
 
                                     </ul>
-                                        <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="lh2b"  style="display: inline; float:none; ;height:40px;width:50px;"><a>炼铁二部</a></li>
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="IE_lh2b"  style="display: inline; float:none; height:40px;width:50px;"><a>炼铁二部</a></li>
                                     
 
                                     </ul>
-                                     <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="yscj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>烧结一部</a></li>
+                                     <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="IE_sj1b"  style="display: inline; float:none; height:40px;width:50px;"><a>烧结一部</a></li>
                                     
 
                                     </ul>
                                        
-                                         <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="shishaocj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>烧结二部</a></li>
+                                         <ul style="list-style: none;width:200px;display: inline; float:none;height:40px;">
+                                        <li id="IE_sj2b"  style="display: inline; float:none; height:40px;width:50px;"><a>烧结二部</a></li>
                                     
 
                                     </ul>
-                                        <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="ylcj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>原料作业部</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="IE_ylzyb"  style="display: inline; float:none; height:40px;width:50px;"><a>原料作业部</a></li>
                                     
 
                                     </ul>
-                                      <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="sylcj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>运料作业部</a></li>
+                                      <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="IE_sylzyb"  style="display: inline; float:none; height:40px;width:50px;"><a>运料作业部</a></li>
                                     
 
                                     </ul>
-                                        <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="pmcj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>喷煤作业部</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="IE_pmzyb"  style="display: inline; float:none; height:40px;width:50px;"><a>喷煤作业部</a></li>
                                     
 
                                     </ul>
-                                      <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="bhcj"  style="display: inline; float:none; ;height:40px;width:50px;"><a>白灰作业部</a></li>
+                                      <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="IE_bhzyb"  style="display: inline; float:none;height:40px;width:50px;"><a>白灰作业部</a></li>
                                     
 
                                     </ul>
 
-                                        <ul id="1" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="wjb"  style="display: inline; float:none; ;height:40px;width:50px;"><a>维检部</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="IE_wjb"  style="display: inline; float:none; height:40px;width:50px;"><a>维检部</a></li>
                                     
 
                                     </ul>
-                                            <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="zdhb"  style="display: inline; float:none; ;height:40px;width:50px;"><a>自动化部</a></li>
+                                            <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="IE_zdhb"  style="display: inline; float:none;height:40px;width:50px;"><a>自动化部</a></li>
                                     
 
                                     </ul>
                                 </div>
+                                <div id="IE_content" style="text-align: left; line-height: 40px; " class="auto-style1">
                                
                                
                                  <%=getFilesList() %>
                             </div>
-                               <div id="绩效项目平台" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none; ;height:40px;">    
-                                        <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>公司制度</a></li>
-                                    
-
+                                <div id="jixiaoguanlipingtai"  style="display: inline; float:none; height:40px;">    
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="ptgl"  style="display: inline; float:none; height:40px;width:50px;"><a>平台管理</a></li>
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="cjzd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>厂级制度</a></li>
-                                    
-
-                                    </ul>       
                                 </div>
+                             <div id="jixiaoguanlipingtai_content" style="text-align: left; line-height: 40px; ">
+                              
                                 <%=getFilesList() %>
                             </div>
-                            <div id="拉动管理" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none; ;height:40px;">    
-                                        <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>工序拉动</a></li>
+                              <div  id="ladongguanli" style="display: inline; float:none; height:40px;">    
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="gxld"  style="display: inline; float:none; height:40px;width:50px;"><a>工序拉动</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="cjzd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>期量图表</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
+                                        <li id="qltb"  style="display: inline; float:none; height:40px;width:50px;"><a>期量图表</a></li>
                                     
 
                                     </ul>       
                                                  <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>物与信息流程图</a></li>
+                                        <li id="wyxxldt"  style="display: inline; float:none; height:40px;width:50px;"><a>物与信息流程图</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="cjzd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>铁前拉动</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
+                                        <li id="tqld"  style="display: inline; float:none; height:40px;width:50px;"><a>铁前拉动</a></li>
                                     
 
                                     </ul>   
                                                  <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>铁钢拉动</a></li>
+                                        <li id="gtld"  style="display: inline; float:none; height:40px;width:50px;"><a>铁钢拉动</a></li>
                                     
 
                                     </ul>
                                     
                                 </div>
-                                <%=getFilesList() %>
+                                 <div id="ladongguanli_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                             <%=getFilesList() %>
                             </div>
-                            <div id="学习培训" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none; ;height:40px;">    
+                               <div  id="xuexipeixun" style="display: inline; float:none; height:40px;">    
                                         <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>厂级培训</a></li>
+                                        <li id="cjpx"  style="display: inline; float:none; height:40px;width:50px;"><a>厂级培训</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="cjzd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>培训反馈</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
+                                        <li id="pxfk"  style="display: inline; float:none; height:40px;width:50px;"><a>培训反馈</a></li>
                                     
 
                                     </ul> 
                                                  <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>培训统计</a></li>
+                                        <li id="pxtj"  style="display: inline; float:none; height:40px;width:50px;"><a>培训统计</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="cjzd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>培训课件</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
+                                        <li id="pxkj"  style="display: inline; float:none; height:40px;width:50px;"><a>培训课件</a></li>
                                     
 
                                     </ul>   
                                                  <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>培训需求</a></li>
+                                        <li id="pxxq"  style="display: inline; float:none; height:40px;width:50px;"><a>培训需求</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="cjzd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>外厂资料</a></li>
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
+                                        <li id="wczl"  style="display: inline; float:none; height:40px;width:50px;"><a>外厂资料</a></li>
                                     
 
                                     </ul> 
                                                  <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>车间级培训</a></li>
+                                        <li id="cjjpx"  style="display: inline; float:none; height:40px;width:50px;"><a>车间级培训</a></li>
                                     
 
                                     </ul>
                                           
                                 </div>
-                                <%=getFilesList() %>
+                              <div id="xuexipeixun_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                               <%=getFilesList() %>
                             </div>
-                            <div id="物与信息流动图" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none; ;height:40px;">    
-                                        <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>物与信息流动图</a></li>
+                           <div  id="wuyuxinxiliudong"  style="display: inline; float:none; height:40px;">    
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="wyxxldt_wuyuxinxiliudongtu"  style="display: inline; float:none; height:40px;width:50px;"><a>物与信息流动图</a></li>
                                     
 
                                     </ul>
                                       
                                 </div>
-                                <%=getFilesList() %>
+                             <div id="wuyuxinxiliudongtu_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                                    <%=getFilesList() %>
                             </div>
-                            <div id="卓越绩效" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none; ;height:40px;">    
+                            <div  id="zhuoyuejixiao"  style="display: inline; float:none; height:40px;">    
                                         <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>公司制度</a></li>
+                                        <li id="zyjx_2017"  style="display: inline; float:none; height:40px;width:50px;"><a>2017</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="cjzd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>厂级制度</a></li>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="zyjx_2016"  style="display: inline; float:none; height:40px;width:50px;"><a>2016</a></li>
                                     
 
-                                    </ul>       
+                                    </ul>   
+                                           <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
+                                        <li id="zyjx_2015"  style="display: inline; float:none; height:40px;width:50px;"><a>2015</a></li>
+                                    
+
+                                    </ul>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="zyjx_2014"  style="display: inline; float:none; height:40px;width:50px;"><a>2014</a></li>
+                                    
+
+                                    </ul>     
                                 </div>
-                                <%=getFilesList() %>
+                                 <div id="zhuoyuejixiao_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                               <%=getFilesList() %>
                             </div>
-                            <div id="标准化作业" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none; ;height:40px;">    
- <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="2017"  style="display: inline; float:none; ;height:40px;width:50px;"><a>2017</a></li>
+                          <div  id="biaozhunhuazhuoye"  style="display: inline; float:none; ;height:40px;">    
+ <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="bzhzy_lt1b"  style="display: inline; float:none; height:40px;width:50px;"><a>炼铁一部</a></li>
                                     
 
                                     </ul>
-                                          <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="2016"  style="display: inline; float:none; ;height:40px;width:50px;"><a>2016</a></li>
+                                        <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="bzhzy_lh2b"  style="display: inline; float:none; height:40px;width:50px;"><a>炼铁二部</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="2015"  style="display: inline; float:none; ;height:40px;width:50px;"><a>2015</a></li>
+                                     <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="bzhzy_sj1b"  style="display: inline; float:none; height:40px;width:50px;"><a>烧结一部</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="2014"  style="display: inline; float:none; ;height:40px;width:50px;"><a>2014</a></li>
+                                       
+                                         <ul style="list-style: none;width:200px;display: inline; float:none;height:40px;">
+                                        <li id="bzhzy_sj2b"  style="display: inline; float:none; height:40px;width:50px;"><a>烧结二部</a></li>
+                                    
+
+                                    </ul>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="bzhzy_ylzyb"  style="display: inline; float:none; height:40px;width:50px;"><a>原料作业部</a></li>
+                                    
+
+                                    </ul>
+                                      <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="bzhzy_sylzyb"  style="display: inline; float:none; height:40px;width:50px;"><a>运料作业部</a></li>
+                                    
+
+                                    </ul>
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="bzhzy_pmzyb"  style="display: inline; float:none; height:40px;width:50px;"><a>喷煤作业部</a></li>
+                                    
+
+                                    </ul>
+                                      <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="bzhzy_bhzyb"  style="display: inline; float:none;height:40px;width:50px;"><a>白灰作业部</a></li>
+                                    
+
+                                    </ul>
+
+                                        <ul  style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="bzhzy_wjb"  style="display: inline; float:none; height:40px;width:50px;"><a>维检部</a></li>
+                                    
+
+                                    </ul>
+                                            <ul style="list-style: none;width:200px;display: inline; float:none; height:40px;">
+                                        <li id="bzhzy_zdhb"  style="display: inline; float:none;height:40px;width:50px;"><a>自动化部</a></li>
                                     
 
                                     </ul>
                                 </div>
-                                <%=getFilesList() %>
+                                 <div id="biaozhunhuazhuoye_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                                 <%=getFilesList() %>
                             </div>
 
-                            <div id="其它" style="text-align: left; line-height: 40px; " class="auto-style1">
-                                <div style="display: inline; float:none; ;height:40px;">    
+                              <div  id="qita"  style="display: inline; float:none; height:40px;">    
                                         <ul style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="gszd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>公司制度</a></li>
+                                        <li id="qt"  style="display: inline; float:none;height:40px;width:50px;"><a>其它</a></li>
                                     
 
                                     </ul>
-                                        <ul id="2" style="list-style: none;width:200px;display: inline; float:none; ;height:40px;">
-                                        <li id="cjzd"  style="display: inline; float:none; ;height:40px;width:50px;"><a>厂级制度</a></li>
-                                    
-
-                                    </ul>       
-                                </div>
+                                   </div>
+                              <div id="qita_content" style="text-align: left; line-height: 40px; " class="auto-style1">
                                 <%=getFilesList() %>
                             </div>
                         </td>
                         <td style="top:0;">
 
-                            <div id="hot_files" style="width: 200px; height:200px; text-align: left; float: none; margin: 0 auto; top: 0; font-size: small; background-image: url('images/catalog_tree_ground.jpg'); background-repeat: no-repeat;">
+                            <div style="width: 200px; height:200px; text-align: left; float: none; margin: 0 auto; top: 0; font-size: small; background-image: url('images/catalog_tree_ground.jpg'); background-repeat: no-repeat;">
                                 <span>热点：</span>
                                 <table>
                                     <tr>
@@ -545,7 +596,24 @@
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="自动化部(软件)" Font-Bold="False" Font-Size="Medium"></asp:Label>
             </div>
+ <div style="text-align: right; background-color:darkslategrey;
+text-align: center; width: 100%; height: 40px; float: none; bottom:0; position: fixed; z-index: 0; left: 0;">
+     <div  class="daohang">
+                                   <ul ><li id="li_glzd" > <a  href="#guanlizhidu" target="_self"> 管理制度 </a></li>
+                                        <li id="li_jycjcj"> <a   href="#jingyichejianchuangjian" target="_self"> 精益车间创建 </a></li>
+                                        <li id="li_xmgl"><a  href="#xiangmuguanli" target="_self" > 项目管理 </a></li>
+                                        <li id="li_IE"  ><a href="#IE" target="_self"> IE </a></li>
+                                        <li id="li_jxglpt" ><a  href="#jixiaoguanlipingtai" target="_self"> 绩效管理平台 </a></li>
+                                        <li id="li_ldgl"  ><a  href="#ladongguanli" target="_self"> 拉动管理 </a></li>
+                                        <li id="li_xxpx"  ><a href="#xuexipeixun" target="_self"> 学习培训 </a></li>
+                                        <li id="li_wyxxld" ><a  href="#wuyuxinxiliudong" target="_self"> 物与信息流动 </a></li>
+                                        <li id="li_zyjx"  ><a  href="#zhuoyuejixiao" target="_self"> 卓越绩效 </a></li>
+                                        <li id="li_bzhzy"  ><a  href="#biaozhunhuazhuoye" target="_self"> 标准化作业 </a></li>
+                                        <li id="li_other"  ><a   href="#qita" target="_self"> 其它 </a></li>
+                                    </ul>
 
+     </div>
+ </div>
             <%-- 下面的DIV为隐藏部分--%>
             <div>
                 <asp:Label ID="Label5" runat="server" Text="ID:" Visible="False" ForeColor="White"></asp:Label>
@@ -556,6 +624,8 @@
                 <asp:Label ID="user_dep" runat="server" Visible="False" ForeColor="White"></asp:Label>
             </div>
         </div>
+       
+
     </form>
 
 </body>

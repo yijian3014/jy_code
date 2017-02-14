@@ -242,6 +242,12 @@ namespace ntkoofficedemo_vs2008_
 
             return "";
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public string get_div_files()
         {
             return "";

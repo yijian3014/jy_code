@@ -18,7 +18,8 @@ var TANGER_OCX_key="";//设置加载印章的key
 var IsFileOpened;  //控件是否打开文档
 var svisble=true;//印章显示状态
 var url="";//初始化URL值
-var newwin,newdoc;
+var newwin, newdoc;
+
 
 //创建新的文档
 function CreatNew(newofficetype)
@@ -50,6 +51,8 @@ function openoffice(url,newofficetype)
 {
     window.open(editMScode+"?newofficetype="+newofficetype+"&url="+url,"editoffice","top=0,left=0,scrollbars=yes,resizable=yes");
 }
+
+
 //当前表单不可编辑,当整个表单只读时调用
 function FormDisabled(bool)
 { 

@@ -112,15 +112,6 @@ namespace ntkoofficedemo_vs2008_ {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// li_glzd 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl li_glzd;
-        
-        /// <summary>
         /// Image3 控件。
         /// </summary>
         /// <remarks>
