@@ -24,25 +24,21 @@
             text-decoration: underline;
             color: red;
         }
-        .auto-style1 {
+        .content_file_list-style {
             width: 600px;
             height: 400px;
             overflow: auto;
+            text-align: left;
+             line-height:30px; 
+             font-size: small;
         }
         .auto-style2 {
             width: 980px;
             height: auto;
             float: none;
             top: 0;
-        }
-        .auto-style3 {
-            width: 100%;
-            height: 40px;
-            float: none;
-            bottom: 136px;
-            position: fixed;
-            z-index: 0;
-            left: 0;
+            text-align: left; 
+            margin: 0 auto;
         }
         .daohang ul{list-style:none;width:980px;font-size:small;}
 .daohang li{float:left;width:80px;background:#CCC;margin-left:3px;line-height:25px;}
@@ -158,7 +154,7 @@
                             </div>
                             <div id="wendangzhiliao_content"  style="text-align: left; width: 600px; line-height:30px; height:400px; overflow: auto; font-size: small;">
 
-                                <%=getFilesList() %>
+                               <%=getHtmlList() %>
                             </div>
                             <div id="guanlizhidu" style="display: inline; float:none;height:40px;">    
                                     <ul style="list-style: none;width:200px;display: inline; float:none;height:40px;">
@@ -169,7 +165,7 @@
                                     </ul> 
                                </div>                               
                              <div id="guanlizhidu_content" style="text-align: left; line-height: 40px; " >                                                              
-                                 <%=getFilesList() %>
+                                  <%=getFilesList() %>
                             </div>
                             
                             
@@ -229,7 +225,7 @@
                                     </ul>
                                      
                                 </div>
-                            <div id="jingyichejianchuangjian_content" style="text-align: left; line-height:30px; font-size: small;" class="auto-style1">
+                            <div id="jingyichejianchuangjian_content"  class="content_file_list-style">
                                  
                                  <%=getFilesList() %>
                             </div>
@@ -260,7 +256,7 @@
 
                                     </ul>
                                 </div>
-                                <div id="xiangmuguanli_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                                <div id="xiangmuguanli_content"  class="content_file_list-style">
                                
                                
                                  <%=getFilesList() %>
@@ -319,7 +315,7 @@
 
                                     </ul>
                                 </div>
-                                <div id="IE_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                                <div id="IE_content"  class="content_file_list-style">
                                
                                
                                  <%=getFilesList() %>
@@ -361,7 +357,7 @@
                                     </ul>
                                     
                                 </div>
-                                 <div id="ladongguanli_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                                 <div id="ladongguanli_content"  class="content_file_list-style">
                              <%=getFilesList() %>
                             </div>
                                <div  id="xuexipeixun" style="display: inline; float:none; height:40px;">    
@@ -402,7 +398,7 @@
                                     </ul>
                                           
                                 </div>
-                              <div id="xuexipeixun_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                              <div id="xuexipeixun_content"  class="content_file_list-style">
                                <%=getFilesList() %>
                             </div>
                            <div  id="wuyuxinxiliudong"  style="display: inline; float:none; height:40px;">    
@@ -413,7 +409,7 @@
                                     </ul>
                                       
                                 </div>
-                             <div id="wuyuxinxiliudongtu_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                             <div id="wuyuxinxiliudongtu_content"  class="content_file_list-style">
                                     <%=getFilesList() %>
                             </div>
                             <div  id="zhuoyuejixiao"  style="display: inline; float:none; height:40px;">    
@@ -438,7 +434,7 @@
 
                                     </ul>     
                                 </div>
-                                 <div id="zhuoyuejixiao_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                                 <div id="zhuoyuejixiao_content"  class="content_file_list-style">
                                <%=getFilesList() %>
                             </div>
                           <div  id="biaozhunhuazhuoye"  style="display: inline; float:none; ;height:40px;">    
@@ -495,7 +491,7 @@
 
                                     </ul>
                                 </div>
-                                 <div id="biaozhunhuazhuoye_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                                 <div id="biaozhunhuazhuoye_content"   class="content_file_list-style">
                                  <%=getFilesList() %>
                             </div>
 
@@ -506,11 +502,11 @@
 
                                     </ul>
                                    </div>
-                              <div id="qita_content" style="text-align: left; line-height: 40px; " class="auto-style1">
+                              <div id="qita_content"  class="content_file_list-style">
                                 <%=getFilesList() %>
                             </div>
                         </td>
-                        <td style="top:0;">
+                        <td >
 
                             <div style="width: 200px; height:200px; text-align: left; float: none; margin: 0 auto; top: 0; font-size: small; background-image: url('images/catalog_tree_ground.jpg'); background-repeat: no-repeat;">
                                 <span>热点：</span>
